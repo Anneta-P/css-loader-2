@@ -3,56 +3,55 @@ body {
   min-height: 100vh;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(to top, #020913, 0.5%, white);
+  background: linear-gradient(to top, #020913, 7%, white);
+}
+
+.loader {
+  position: relative;
+  /* transform: translate3d(-50%, -50%, 0); */
 }
 
 .bubble {
-  position: relative;
   height: 40px;
   width: 40px;
-  border-radius: 50%;
+  border-radius: 100%;
   display: inline-block;
-  margin: 1rem;
-  animation: scaling 2.5s ease-in-out infinite;
+  margin: 0.2rem;
+  animation: slide 1.5s linear infinite;
+  opacity: 0.2;
+  background-color: rgb(15, 39, 221);
 }
 
-@keyframes scaling {
-  0%,
-  100% {
-    /* transform: scale(0.2); */
-    background-color: rgba(117, 190, 218, 0.5);
-    filter: hue-rotate(0deg);
-  }
-  40% {
+@keyframes slide {
+  0% {
     transform: scale(1);
-    background-color: rgb(175, 119, 228, 0.5);
   }
+
   50% {
-    transform: scale(1);
-    background-color: rgba(236, 168, 225, 0.5);
+    transform: scale(2);
   }
 
-  90% {
-    transform: scale(3);
+  100% {
+    transform: scale(1);
   }
 }
 
-div:nth-child(1) {
+.bubble:nth-child(1) {
   animation-delay: 0.2s;
 }
 
-div:nth-child(2) {
+.bubble:nth-child(2) {
   animation-delay: 0.4s;
 }
 
-div:nth-child(3) {
+.bubble:nth-child(3) {
   animation-delay: 0.6s;
 }
 
-div:nth-child(4) {
+.bubble:nth-child(4) {
   animation-delay: 0.8s;
 }
 
-div:nth-child(5) {
+.bubble:nth-child(5) {
   animation-delay: 1s;
 }
