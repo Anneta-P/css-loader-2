@@ -1,13 +1,13 @@
-/* {
-  background: linear-gradient(to top, black, 0.15%, white);
-} */
-
 body {
-  margin-left: 30%;
-  margin-top: 30%;
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to top, #020913, 0.5%, white);
 }
 
-div {
+.bubble {
+  position: relative;
   height: 40px;
   width: 40px;
   border-radius: 50%;
@@ -19,16 +19,21 @@ div {
 @keyframes scaling {
   0%,
   100% {
-    transform: scale(0.2);
+    /* transform: scale(0.2); */
     background-color: rgba(117, 190, 218, 0.5);
+    filter: hue-rotate(0deg);
   }
   40% {
-    transform-scale(1);
-    background-color:rgb(175, 119, 228, 0.5);
+    transform: scale(1);
+    background-color: rgb(175, 119, 228, 0.5);
   }
   50% {
     transform: scale(1);
     background-color: rgba(236, 168, 225, 0.5);
+  }
+
+  90% {
+    transform: scale(3);
   }
 }
 
